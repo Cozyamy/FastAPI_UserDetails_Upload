@@ -13,7 +13,7 @@ This is a FastAPI application for managing user registration and retrieval. It a
 1. Clone the repository:
 
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/Cozyamy/FastAPI_UserDetails_Upload.git
    ```
 
 2. Install the dependencies:
