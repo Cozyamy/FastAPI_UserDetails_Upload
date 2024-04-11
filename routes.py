@@ -3,9 +3,17 @@ from dependency import get_session
 from models import User, RegistrationResponse
 from sqlmodel import Session
 from sqlalchemy.exc import IntegrityError
+from fastapi.responses import RedirectResponse
 from typing import Annotated
+import uuid
 
 users = APIRouter()
+
+IMAGEDIR ='./uploaded_images/'
+
+@users.get('/')
+async def root():
+    return RedirectResponse('/docs')
 
 @users.post("/register", response_model=RegistrationResponse)
 async def register_user(name: str,
@@ -31,7 +39,11 @@ async def register_user(name: str,
         HTTPException: If a user with the same name already exists
     """
     try:
-        with open(f"./uploaded_images/{profile_picture.filename}", "wb") as buffer:
+        photo_ext = profile_picture.filename.split('.')[-1]
+        if photo_ext not in ["jpg", "jpeg", "png", "svg"]:
+            return {"error": "Invalid Format"}
+        profile_picture.filename = f"{uuid.uuid4()}.{photo_ext}"
+        with open(f"{IMAGEDIR}{profile_picture.filename}", "wb") as buffer:
             buffer.write(profile_picture.file.read())
             user = User(name=name, age=age, gender=gender, is_married=ismarried, profile_picture=profile_picture.filename)
             session.add(user)

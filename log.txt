@@ -226,3 +226,79 @@ FROM user
 WHERE user.id = ?
 2024-04-09 19:01:38,887 - INFO - [generated in 0.00056s] (5,)
 2024-04-09 19:01:38,888 - INFO - {'url': '/users/5', 'method': 'GET', 'process_time': 0.06564712524414062, 'host': '127.0.0.1', 'ip': '127.0.0.1'}
+2024-04-11 22:38:56,207 - INFO - BEGIN (implicit)
+2024-04-11 22:38:56,625 - INFO - PRAGMA main.table_info("user")
+2024-04-11 22:38:56,650 - INFO - [raw sql] ()
+2024-04-11 22:38:59,356 - INFO - COMMIT
+2024-04-11 22:39:07,005 - INFO - BEGIN (implicit)
+2024-04-11 22:39:07,006 - INFO - PRAGMA main.table_info("user")
+2024-04-11 22:39:07,006 - INFO - [raw sql] ()
+2024-04-11 22:39:07,027 - INFO - COMMIT
+2024-04-11 22:39:24,077 - INFO - {'url': '/docs', 'method': 'GET', 'process_time': 0.0050144195556640625, 'host': '127.0.0.1', 'ip': '127.0.0.1'}
+2024-04-11 22:39:35,309 - INFO - {'url': '/openapi.json', 'method': 'GET', 'process_time': 0.18608522415161133, 'host': '127.0.0.1', 'ip': '127.0.0.1'}
+2024-04-11 22:39:37,970 - INFO - {'url': '/docs', 'method': 'GET', 'process_time': 0.01033329963684082, 'host': '127.0.0.1', 'ip': '127.0.0.1'}
+2024-04-11 22:39:38,354 - INFO - {'url': '/openapi.json', 'method': 'GET', 'process_time': 0.00034999847412109375, 'host': '127.0.0.1', 'ip': '127.0.0.1'}
+2024-04-11 22:39:59,852 - INFO - {'url': '/', 'method': 'GET', 'process_time': 0.00081634521484375, 'host': '127.0.0.1', 'ip': '127.0.0.1'}
+2024-04-11 22:39:59,976 - INFO - {'url': '/docs', 'method': 'GET', 'process_time': 0.0003402233123779297, 'host': '127.0.0.1', 'ip': '127.0.0.1'}
+2024-04-11 22:40:00,153 - INFO - {'url': '/openapi.json', 'method': 'GET', 'process_time': 0.0006422996520996094, 'host': '127.0.0.1', 'ip': '127.0.0.1'}
+2024-04-11 22:40:39,076 - INFO - {'url': '/docs', 'method': 'GET', 'process_time': 0.0005612373352050781, 'host': '127.0.0.1', 'ip': '127.0.0.1'}
+2024-04-11 22:40:39,394 - INFO - {'url': '/openapi.json', 'method': 'GET', 'process_time': 0.0005888938903808594, 'host': '127.0.0.1', 'ip': '127.0.0.1'}
+2024-04-11 22:41:27,201 - INFO - BEGIN (implicit)
+2024-04-11 22:41:27,211 - INFO - PRAGMA main.table_info("user")
+2024-04-11 22:41:27,212 - INFO - [raw sql] ()
+2024-04-11 22:41:27,213 - INFO - COMMIT
+2024-04-11 22:41:27,377 - INFO - BEGIN (implicit)
+2024-04-11 22:41:27,446 - INFO - INSERT INTO user (name, age, gender, is_married, profile_picture) VALUES (?, ?, ?, ?, ?)
+2024-04-11 22:41:27,447 - INFO - [generated in 0.00160s] ('David', 15, 'male', 0, '267d7f7f-c507-4f24-8013-7ea1a072eede.png')
+2024-04-11 22:41:27,947 - INFO - COMMIT
+2024-04-11 22:41:28,931 - INFO - {'url': '/register', 'method': 'POST', 'process_time': 1.9176316261291504, 'host': '127.0.0.1', 'ip': '127.0.0.1'}
+2024-04-11 22:41:48,143 - INFO - BEGIN (implicit)
+2024-04-11 22:41:48,145 - INFO - PRAGMA main.table_info("user")
+2024-04-11 22:41:48,146 - INFO - [raw sql] ()
+2024-04-11 22:41:48,148 - INFO - COMMIT
+2024-04-11 22:41:48,154 - INFO - BEGIN (implicit)
+2024-04-11 22:41:48,170 - INFO - SELECT user.name AS user_name, user.age AS user_age, user.gender AS user_gender, user.is_married AS user_is_married, user.profile_picture AS user_profile_picture, user.id AS user_id 
+FROM user 
+WHERE user.id = ?
+2024-04-11 22:41:48,189 - INFO - [generated in 0.01943s] (3,)
+2024-04-11 22:41:48,540 - INFO - {'url': '/users/3', 'method': 'GET', 'process_time': 0.39836740493774414, 'host': '127.0.0.1', 'ip': '127.0.0.1'}
+2024-04-11 22:42:01,860 - INFO - BEGIN (implicit)
+2024-04-11 22:42:01,878 - INFO - PRAGMA main.table_info("user")
+2024-04-11 22:42:01,882 - INFO - [raw sql] ()
+2024-04-11 22:42:01,884 - INFO - COMMIT
+2024-04-11 22:42:01,952 - INFO - BEGIN (implicit)
+2024-04-11 22:42:01,965 - INFO - SELECT user.name AS user_name, user.age AS user_age, user.gender AS user_gender, user.is_married AS user_is_married, user.profile_picture AS user_profile_picture, user.id AS user_id 
+FROM user 
+WHERE user.id = ?
+2024-04-11 22:42:01,965 - INFO - [generated in 0.00079s] (4,)
+2024-04-11 22:42:01,967 - INFO - {'url': '/users/4', 'method': 'GET', 'process_time': 0.10944366455078125, 'host': '127.0.0.1', 'ip': '127.0.0.1'}
+2024-04-11 22:42:11,421 - INFO - BEGIN (implicit)
+2024-04-11 22:42:11,422 - INFO - PRAGMA main.table_info("user")
+2024-04-11 22:42:11,422 - INFO - [raw sql] ()
+2024-04-11 22:42:11,427 - INFO - COMMIT
+2024-04-11 22:42:11,433 - INFO - BEGIN (implicit)
+2024-04-11 22:42:11,439 - INFO - SELECT user.name AS user_name, user.age AS user_age, user.gender AS user_gender, user.is_married AS user_is_married, user.profile_picture AS user_profile_picture, user.id AS user_id 
+FROM user 
+WHERE user.id = ?
+2024-04-11 22:42:11,440 - INFO - [generated in 0.00042s] (6,)
+2024-04-11 22:42:11,527 - INFO - {'url': '/users/6', 'method': 'GET', 'process_time': 0.10688018798828125, 'host': '127.0.0.1', 'ip': '127.0.0.1'}
+2024-04-11 22:43:05,340 - INFO - BEGIN (implicit)
+2024-04-11 22:43:05,341 - INFO - PRAGMA main.table_info("user")
+2024-04-11 22:43:05,342 - INFO - [raw sql] ()
+2024-04-11 22:43:05,343 - INFO - COMMIT
+2024-04-11 22:43:05,344 - INFO - BEGIN (implicit)
+2024-04-11 22:43:05,346 - INFO - SELECT user.name AS user_name, user.age AS user_age, user.gender AS user_gender, user.is_married AS user_is_married, user.profile_picture AS user_profile_picture, user.id AS user_id 
+FROM user 
+WHERE user.id = ?
+2024-04-11 22:43:05,352 - INFO - [generated in 0.00681s] (8,)
+2024-04-11 22:43:05,354 - INFO - {'url': '/users/8', 'method': 'GET', 'process_time': 0.014663457870483398, 'host': '127.0.0.1', 'ip': '127.0.0.1'}
+2024-04-11 22:43:12,223 - INFO - BEGIN (implicit)
+2024-04-11 22:43:12,223 - INFO - PRAGMA main.table_info("user")
+2024-04-11 22:43:12,223 - INFO - [raw sql] ()
+2024-04-11 22:43:12,224 - INFO - COMMIT
+2024-04-11 22:43:12,224 - INFO - BEGIN (implicit)
+2024-04-11 22:43:12,226 - INFO - SELECT user.name AS user_name, user.age AS user_age, user.gender AS user_gender, user.is_married AS user_is_married, user.profile_picture AS user_profile_picture, user.id AS user_id 
+FROM user 
+WHERE user.id = ?
+2024-04-11 22:43:12,226 - INFO - [generated in 0.00023s] (7,)
+2024-04-11 22:43:12,227 - INFO - {'url': '/users/7', 'method': 'GET', 'process_time': 0.004895210266113281, 'host': '127.0.0.1', 'ip': '127.0.0.1'}
