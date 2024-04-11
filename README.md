@@ -1,7 +1,3 @@
-Certainly! Here's a basic README.md for your FastAPI application:
-
----
-
 # FastAPI Application
 
 This is a FastAPI application for managing user registration and retrieval. It allows users to register with their basic information along with a profile picture and retrieve user details by their ID.
